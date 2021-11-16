@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="./watch.css">
+</head>
+<body>
+    <script language="JavaScript">
+        setInterval(function() {
+      // Seconds
+      var seconds = new Date().getSeconds();
+      document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds;
+  
+      // Minutes
+      var minutes = new Date().getMinutes();
+      document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes;
+  
+      // Hours
+      var hours = new Date().getHours();
+      document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours;
+    }, 1000);
+    </script>
+    <section class="watch">
+        <h1 class="title">
+                    Московское время
+        </h1>
+    </section>
+    <div class="clock">
+        <ul>
+            <li id="hours">00</li>
+            <li id="separator">:</li>
+            <li id="minutes">00</li>
+            <li id="separator">:</li>
+            <li id="seconds">00</li>
+        </ul>
+    </div>
+</body>
+</html>
